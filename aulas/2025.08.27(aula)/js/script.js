@@ -38,7 +38,7 @@ switch (opcao) {
         break;
     case 7:
         var nomes = nome.split(" ");
-        document.write(`${nomes[0].charAt(0).toUpperCase()} ${nomes[nomes.length - 1].toUpperCase()}`);
+        document.write(`${nomes[0].charAt(0).toUpperCase()} ${nomes[nomes.length - 1]charAt(0).toUpperCase()}`);
         break;
     case 8:
         var nomes = nome.split(" ");
@@ -47,5 +47,6 @@ switch (opcao) {
     default:
         alert("Digite um opção válida")
         break;
+
 
 }
