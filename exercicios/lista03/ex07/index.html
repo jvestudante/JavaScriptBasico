@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso ao Sistema</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="form-container">
+        <form id="loginForm">
+            <table align="center">
+                <tr>
+                    <td colspan="2" align="center">
+                        <h1>Acesso ao Sistema</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="txtLogin">Login:</label></td>
+                    <td>
+                        <input type="text" id="txtLogin" maxlength="20">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="txtSenha">Senha:</label></td>
+                    <td>
+                        <input type="password" id="txtSenha" maxlength="8">
+                        <span class="campo-info">(max. 8 caracteres)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="txtConSenha">Confirmar Senha:</label></td>
+                    <td>
+                        <input type="password" id="txtConSenha" maxlength="8">
+                        <span class="campo-info">(max. 8 caracteres)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="button" id="btnEntrar">Entrar</button>
+                        <button type="reset">Limpar</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
