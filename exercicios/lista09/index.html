@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 09 - REGEX</title>
+</head>
+<body>
+    <h1>LISTA 09</h1>
+    <form action="">
+        <label for=""><b>Data de nascimento</b> (OBS: Únicos formatos permitidos: dd/mm/aaaa ou dd/mm/aa) :</label>
+        <input type="text" id="nascimentoTxt" value="14/02/2000">
+        <input type="button" value="Validar" id="btnNascimento">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>CPF</b>:</label>
+        <input type="text" id="cpfTxt" value="222.545.236-23">
+        <input type="button" value="Validar" id="btnCpf">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Número de mátriculo</b> (OBS: Únicos formatos permitidos: IFTM-xxx/xxx-yy ou iftm-xxx/xxx-yy. Onde x é um
+            dígito e y um caracter alfanumérico.) :</label>
+        <input type="text" id="matriculaTxt" value="iftm-123/123-a2">
+        <input type="button" value="Validar" id="btnMatricula">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Código disciplina</b> (OBS: Único formato permitido: MT-xx.xxx-IFTM) :</label>
+        <input type="text" id="cdgDisciplinaTxt" value="mT-12.123-IFTm">
+        <input type="button" value="Validar" id="btnCdgDisciplina">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Código disciplina (versão 2)</b> (OBS: Único formato permitido: MT-xx.xxx-IFTM.) :</label>
+        <input type="text" id="cdgDisciplinaTxt2" value="MT-12.123-IFTm">
+        <input type="button" value="Validar" id="btnCdgDisciplina2">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Código disciplina (versão 3)</b> (OBS: Único formato permitido: MT-xx.xxx-IFTM.) :</label>
+        <input type="text" id="cdgDisciplinaTxt3" value="M T-12.123-I FT m">
+        <input type="button" value="Validar" id="btnCdgDisciplina3">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Código disciplina (versão 4)</b> (OBS: Único formato permitido: MT-xx.xxx-IFTM Y.) :</label>
+        <input type="text" id="cdgDisciplinaTxt4" value="MT-12.123-IFTm-Uberlândia centro">
+        <input type="button" value="Validar" id="btnCdgDisciplina4">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Nome de campus do IFTM</b> (OBS: Únicos formatos permitidos: IFTM campus Uberlândia ou IFTM campus
+            Uberlândia Centro.) :</label>
+        <input type="text" id="campusTxt" value="IFTM campus Uberlândia">
+        <input type="button" value="Validar" id="btnCampus">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Telefone</b> (OBS: Único formato permitido: +yy(xx)xxxxx-xxxx. Onde x e y são dígitos. O y refere
+            ao código internacional do país (DDI).) :</label>
+        <input type="text" id="foneTxt" value="+55(34)99856-1215">
+        <input type="button" value="Validar" id="btnFone">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Telefone (versão 2)</b> (OBS: Únicos formatos permitidos: (xx)xxxxx-xxxx ou (xxx)xxxxx-xxxx) :</label>
+        <input type="text" id="foneTxt2" value="(035)99999-1213">
+        <input type="button" value="Validar" id="btnFone2">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Altura de uma pessoa</b> (OBS: Únicos formatos permitidos: x,xz ou x.xz.) :</label>
+        <input type="text" id="alturaTxt" value="2,33">
+        <input type="button" value="Validar" id="btnAltura">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Faturamento anual da empresa</b> (OBS: O faturamento de uma empresa pode variar de R$0,00 até R$999.999.999.999,99
+            (999 bilhões de reais)) :</label>
+        <input type="text" id="faturamentoTxt" value="R$999.999.999.999,33">
+        <input type="button" value="Validar" id="btnFaturamento">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Cronômetro</b> (OBS: Único formato permitido: HH:MM:SS:CC (HH: hora, MM: minuto, SS: segundo,
+            CC: centésimo de segundo).) :</label>
+        <input type="text" id="cronometroTxt" value="04:50:59:99">
+        <input type="button" value="Validar" id="btnCronometro">
+        <br>
+        <br>
+    </form>
+    <form action="">
+        <label for=""><b>Senha</b> (OBS: Único formato permitido: X&W.Y.Z-U,V.T ou X&W.Y-U,V.T. Exemplo: 1a1d5.&Agf.aei.AgD0-cacd,,##.dd8) :</label>
+        <input type="text" id="senhaTxt" value="1asd5.&Agf.aei.AgD0-cacd,,##.dd8">
+        <input type="button" value="Validar" id="btnSenha">
+        <br>
+        <br>
+    </form>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
