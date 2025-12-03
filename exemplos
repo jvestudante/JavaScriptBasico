@@ -1,1 +1,99 @@
+// Exemplo de uso do setInterval
 
+// Função que será executada repetidamente
+function mostrarMensagem() {
+  console.log("Esta mensagem aparece a cada 2 segundos!");
+}
+
+// Usando setInterval para chamar a função a cada 2000 milissegundos (2 segundos)
+let intervaloId = setInterval(mostrarMensagem, 2000);
+
+// Para parar a execução do setInterval depois de 10 segundos, você pode usar clearInterval
+setTimeout(function() {
+  clearInterval(intervaloId);
+  console.log("O intervalo foi parado.");
+}, 10000);
+
+
+/////////////////////////////////////////////////////////////////HTML DINAMICO/////////////////////////////////////////
+
+// Obtendo a referência da div com id "container"
+let container = document.getElementById("container");
+
+// Criando um título <h2> e adicionando texto
+let titulo = document.createElement("h2");
+titulo.textContent = "Título Adicionado via JavaScript";
+
+// Criando um parágrafo <p> com texto
+let paragrafo = document.createElement("p");
+paragrafo.textContent = "Este conteúdo foi adicionado dinamicamente dentro da div.";
+
+// Criando um botão <input type="button"> que, ao ser clicado, exibe um alerta
+let botao = document.createElement("input");
+botao.type = "button";
+botao.value = "Clique em mim!"; // O valor será exibido no botão
+botao.onclick = function() {
+    alert("Você clicou no botão de tipo input dentro da div!");
+};
+
+// Agora vamos adicionar os elementos criados dentro da div container
+container.appendChild(titulo);    // Adicionando o título
+container.appendChild(paragrafo); // Adicionando o parágrafo
+container.appendChild(botao);     // Adicionando o input tipo button
+
+//////////////////////////////////////////////////////////ABRIR GUIAS//////////////////////////////////////////////
+
+// Função para abrir uma página na própria guia
+function abrirNaPropriaGuia() {
+  window.location.href = "https://www.exemplo.com";  // Abre a página na própria guia
+}
+
+// Função para abrir uma nova guia
+function abrirNovaGuia() {
+  window.open("https://www.exemplo.com", "_blank");  // Abre a página em uma nova guia
+}
+
+// Usando setTimeout para abrir a página após 5 segundos
+setTimeout(abrirNaPropriaGuia, 5000);  // A página será aberta após 5 segundos na mesma guia
+
+// Usando setTimeout para abrir a página em uma nova guia após 7 segundos
+setTimeout(abrirNovaGuia, 7000);  // A página será aberta em uma nova guia após 7 segundos
+
+/////////////////////////////////////////////////////////////////////CRONOMETRO//////////////////////////////////////////////////
+
+let segundos = 0;
+let minutos = 0;
+let cronometroAtivo = false;
+
+// Função para formatar o tempo no formato MM:SS
+function formatarTempo(minutos, segundos) {
+    return `${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
+}
+
+// Função recursiva que atualiza o cronômetro a cada segundo
+function atualizarCronometro() {
+    if (cronometroAtivo) {
+        // Incrementando os segundos
+        segundos++;
+
+        // Se os segundos alcançarem 60, incrementamos os minutos e resetamos os segundos
+        if (segundos >= 60) {
+            segundos = 0;
+            minutos++;
+        }
+
+        // Atualizando a exibição do cronômetro
+        document.getElementById('cronometro').textContent = formatarTempo(minutos, segundos);
+
+        // Usando setTimeout para chamar a função novamente após 1 segundo (1000 ms)
+        setTimeout(atualizarCronometro, 1000);
+    }
+}
+
+// Função para iniciar o cronômetro
+function iniciarCronometro() {
+    if (!cronometroAtivo) {
+        cronometroAtivo = true;
+        atualizarCronometro();
+    }
+}
